@@ -10,8 +10,7 @@
     "preview": "vite preview",
     "typecheck": "tsc -b --pretty",
     "test": "vitest run",
-    "test:watch": "vitest",
-    "lint": "eslint ."
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
