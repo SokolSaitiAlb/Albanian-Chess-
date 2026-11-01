@@ -27,6 +27,7 @@
     "eslint": "latest",
     "typescript": "latest",
     "vite": "latest",
-    "vitest": "latest"
+    "vitest": "latest",
+    "jsdom": "latest"
   }
 }
