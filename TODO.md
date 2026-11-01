@@ -50,11 +50,12 @@ This is the source-of-truth implementation checklist. Items are not complete unt
 - [ ] Verify AI operation with network disabled.
 
 ## P4 — Final art and 3D assets
-- [ ] Archive and document the approved visual references.
-- [ ] Model the king, queen, bishop, knight, rook, and pawn.
+- [ ] Archive the three user-supplied concept references in the repository with provenance and usage-rights notes.
+- [x] Define visual role mapping and dark/light material direction from the supplied concept references.
+- [ ] Model the king, queen, bishop, knight, rook, and pawn in Blender.
 - [ ] Create dark and light material variants.
 - [ ] Model the final board and base.
-- [ ] Create the medieval environment.
+- [ ] Create the medieval fortress environment.
 - [ ] Export optimized GLB assets.
 - [ ] Validate scale, pivots, materials, and mobile readability.
 - [ ] Add asset manifest and license records.
