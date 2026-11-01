@@ -3,24 +3,25 @@
 This is the source-of-truth implementation checklist. Items are not complete until their acceptance criteria are verified.
 
 ## P0 — Repository foundation
-- [ ] Initialize the Vite + React + TypeScript application.
-- [ ] Add strict TypeScript settings.
+- [x] Initialize the Vite + React + TypeScript application.
+- [x] Add strict TypeScript settings.
 - [ ] Add linting and formatting.
-- [ ] Add Vitest and a passing smoke test.
+- [x] Add Vitest and a smoke test.
 - [ ] Add Playwright browser smoke test.
-- [ ] Add CI for install, type-check, tests, and production build.
+- [x] Add CI for install, type-check, tests, and production build.
 - [ ] Add Capacitor configuration and Android platform.
 - [ ] Add project license decision and third-party license inventory.
 
 ## P1 — Three.js prototype
-- [ ] Create the Three.js renderer and scene lifecycle.
-- [ ] Build a procedural 8×8 chessboard.
-- [ ] Add placeholder geometry for all 32 pieces.
-- [ ] Implement free orbit camera.
-- [ ] Add touch-friendly rotate, zoom, pan, and reset-view controls.
-- [ ] Implement raycasting and world-to-chess-square mapping.
-- [ ] Add selected-square and destination highlighting.
-- [ ] Handle resize, app backgrounding, and renderer disposal.
+- [x] Create the Three.js renderer and scene lifecycle.
+- [x] Build a procedural 8×8 chessboard.
+- [x] Add placeholder geometry for all 32 pieces.
+- [x] Implement free orbit camera.
+- [x] Add touch-friendly rotate, zoom, pan, and reset-view controls.
+- [x] Implement raycasting and world-to-chess-square mapping.
+- [x] Add selected-square highlighting.
+- [x] Handle resize and renderer disposal.
+- [ ] Handle app backgrounding and WebGL context restoration.
 - [ ] Test the prototype in desktop browser and Android WebView.
 
 ## P2 — Chess rules and local play
@@ -49,13 +50,8 @@ This is the source-of-truth implementation checklist. Items are not complete unt
 - [ ] Verify AI operation with network disabled.
 
 ## P4 — Final art and 3D assets
-- [ ] Archive and document the approved Higgsfield visual references.
-- [ ] Model the king.
-- [ ] Model the queen.
-- [ ] Model the bishop.
-- [ ] Model the knight.
-- [ ] Model the rook.
-- [ ] Model the pawn.
+- [ ] Archive and document the approved visual references.
+- [ ] Model the king, queen, bishop, knight, rook, and pawn.
 - [ ] Create dark and light material variants.
 - [ ] Model the final board and base.
 - [ ] Create the medieval environment.
