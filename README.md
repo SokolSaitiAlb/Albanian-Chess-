@@ -1,19 +1,30 @@
 # Shah Shqip
 
-**A cinematic medieval chess game inspired by Albanian history.**
+**A cinematic 3D chess game inspired by the history of Arbëria.**
 
-Shah Shqip is an offline-first chess game planned for Android, built with TypeScript, Three.js, React, chess.js, Stockfish WASM, and Capacitor. Its visual direction combines medieval Albanian-inspired character design, dark obsidian and pale limestone materials, antique gold details, and a freely orbiting 3D camera.
+Shah Shqip preserves the international rules of chess while giving its six traditional roles an Albanian historical identity inspired by fifteenth-century Arbëria.
 
-> **Project status:** Planning and foundation. This repository is being initialized. The complete game, final 3D assets, AI integration, and Android release are not yet implemented.
+## The six-piece collection
+
+| Chess role | Historical identity |
+|---|---|
+| King | Gjergj Kastrioti Skënderbeu |
+| Queen | Donika Kastrioti (Arianiti) |
+| Bishop | Pal Engjëlli |
+| Knight | Arbërian cavalry / Stratioti |
+| Rook | Krujë Castle tower |
+| Pawn | League of Lezhë foot soldier |
+
+The two armies use distinct visual treatments: dark forged metal and aged bronze versus warm limestone / ivory with restrained gold details.
 
 ## Product goals
 
-- Play a complete chess game against an offline AI opponent.
+- Play standard chess against an offline AI opponent.
 - Play local two-player chess on one device.
-- Present a cinematic, real-time 3D chessboard with touch-friendly free camera controls.
-- Use original 3D chess pieces inspired by Albanian history and the project's approved visual references.
-- Save games and settings locally.
-- Ship an installable Android APK/AAB.
+- Explore a cinematic 3D board with touch-friendly free camera controls.
+- Use original 3D assets inspired by Albanian history and the project's approved visual references.
+- Keep gameplay available offline.
+- Package the application for Android.
 
 ## Planned technology
 
@@ -22,27 +33,25 @@ Shah Shqip is an offline-first chess game planned for Android, built with TypeSc
 | Application | React + TypeScript + Vite |
 | 3D rendering | Three.js |
 | Camera | Three.js OrbitControls |
+| 3D asset format | glTF 2.0 binary (GLB) |
 | Chess rules | chess.js |
 | AI opponent | Stockfish WebAssembly via Web Worker |
 | Android packaging | Capacitor |
-| 3D asset authoring | Blender, exported as GLB/glTF |
+| 3D authoring | Blender |
 | Local persistence | IndexedDB |
 | Testing | Vitest, Playwright, Android device testing |
 
-Versions will be pinned in the package lockfile when the implementation foundation is installed and verified.
-
-## Game modes
-
-1. **Play vs AI** — offline Stockfish opponent with calibrated difficulty presets.
-2. **Local Multiplayer** — two players take turns on the same device, with optional board rotation.
-
 ## Visual direction
 
-- Cinematic Medieval environment: stone hall, restrained atmospheric fog, dust particles, dramatic but readable lighting.
-- Board: dark obsidian and pale limestone.
-- Pieces: six chess roles per side, with distinct dark and light material variants.
-- Accents: antique gold and aged bronze.
-- Camera: free orbit, zoom, and pan with touch-friendly limits and a reset-view action.
+- **Characters:** Skanderbeg, Donika, Pal Engjëlli, Arbërian cavalry, Krujë Castle and the League's foot soldiers.
+- **Materials:** dark forged metal / bronze and pale limestone / ivory.
+- **Environment:** medieval stone fortress atmosphere inspired by Krujë and the Albanian highlands.
+- **Camera:** free orbit, zoom and pan, with touch-friendly limits and reset.
+- **Readability:** historical detail must never obscure the chess role or legal-move feedback.
+
+## Historical content policy
+
+Shah Shqip is a creative interpretation inspired by history. Historical biographies, dates, battle descriptions, titles and heraldic claims must be checked against reputable sources before appearing as factual in-game content. Visual concept art is not itself historical evidence.
 
 ## Repository map
 
@@ -68,35 +77,33 @@ Versions will be pinned in the package lockfile when the implementation foundati
 
 ## Getting started
 
-The application scaffold is being established. Once the initial implementation files and dependencies are committed:
-
 ```bash
 npm install
 npm run dev
 ```
 
-Android development will require Android Studio or the Android SDK, a compatible JDK, and the Capacitor Android platform.
+Android development requires the Android SDK, a compatible JDK and the Capacitor Android platform.
 
 ## Development principles
 
 - Keep chess rules independent from rendering and UI.
-- Treat the chess rules library as the authority for legal moves and game outcomes.
-- Treat AI output as a proposed move; validate it before applying it.
+- The chess rules library is authoritative for legal moves and game outcomes.
+- AI output is only a proposed move; validate it before applying it.
 - Keep gameplay and assets available offline.
-- Profile on real Android hardware before setting performance claims.
-- Do not commit generated build output, local secrets, or unlicensed assets.
+- Profile on real Android hardware before making performance claims.
+- Do not commit generated build output, secrets or unlicensed assets.
 
 ## Documentation
 
 - [Master Plan](docs/MASTER_PLAN.md)
 - [Architecture](docs/ARCHITECTURE.md)
-- [3D Asset Pipeline](docs/ASSET_PIPELINE.md)
+- [Historical 3D Asset Pipeline](docs/ASSET_PIPELINE.md)
 - [Development To Do](TODO.md)
 
 ## License
 
-The project license has not yet been selected. Third-party components and assets retain their own licenses. Stockfish integration must comply with GPL-3.0 obligations; see the Master Plan before distributing a build containing Stockfish.
+The project license has not yet been selected. Third-party components and assets retain their own licenses. Stockfish integration must comply with its applicable GPL-3.0 obligations.
 
 ## Project language
 
-All source code, documentation, comments, issue titles, and project-facing technical content in this repository should be written in **English**.
+All source code, documentation, comments, issue titles and project-facing technical content in this repository must be written in **English**.
